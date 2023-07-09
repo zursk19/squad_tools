@@ -23,15 +23,13 @@ while getops "m:l:h" flag; do
     esac
 done
 
-else
-    if modId=''; then
-        echo "-m MOD_ID missing"
-        exit 1
-    fi
-    if location=''; then
-        echo "-l location missing"
-        exit 1
-    fi
+if modId=''; then
+    echo "-m MOD_ID missing"
+    exit 1
+fi
+if location=''; then
+    echo "-l location missing"
+    exit 1
 fi
 
 echo "MOD ID: ${modId}";
