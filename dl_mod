@@ -1,11 +1,21 @@
 #!/bin/bash
+###############
+# Help        #
+###############
+Help()
+{
+    #Display help
+    echo "-m MOD_ID (Required)"
+    echo "-l Location of server directory (Required)"
+
+}
 
 echo "MOD Downloader by ZURSK19";
 modId=''
 location=''
 helpTerminate=false
 
-while getops m:l:h flag; do
+while getops "m:l:h" flag; do
     case "${flag}" in
         h) helpTerminate=true;;
         m) modId="${OPTARG}";;
