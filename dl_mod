@@ -5,8 +5,12 @@
 Help()
 {
     #Display help
-    echo "-m MOD_ID (Required)"
-    echo "-l Location of server directory (Required)"
+    echo 
+    echo "   Options:"
+    echo "      -m MOD_ID (Required)"
+    echo "      -l Location of server directory (Required)"
+    echo
+    exit 1
 
 }
 
