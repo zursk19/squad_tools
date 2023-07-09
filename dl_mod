@@ -11,7 +11,7 @@ while getops m:l:h flag; do
         m) modId="${OPTARG}";;
         l) location="${OPTARG}";;
     esac
-Downloader
+done
 
 if $helpTerminate; then
     echo "-m MOD_ID -l Location of server directory"
