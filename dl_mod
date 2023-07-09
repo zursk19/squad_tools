@@ -16,21 +16,21 @@ location=''
 helpTerminate=false
 
 while getops "m:l:h" flag; do
-    case "${flag}" in
+    case "$flag" in
         h) helpTerminate=true;;
         m) modId="${OPTARG}";;
         l) location="${OPTARG}";;
     esac
 done
 
-if $helpTerminate; then
+if helpTerminate; then
     echo "-m MOD_ID -l Location of server directory"
 else
-    if $modId=''; then
+    if modId=''; then
         echo "-m MOD_ID missing"
         exit 1
     fi
-    if $location=''; then
+    if location=''; then
         echo "-l location missing"
         exit 1
     fi
