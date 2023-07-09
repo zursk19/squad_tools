@@ -21,6 +21,7 @@ location=''
 helpTerminate=false
 
 while getopts "m:l:h" opts; do
+    echo "$opts"
     case "$opts" in
         h) Help;;
         m) modId="$OPTARG";;
