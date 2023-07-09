@@ -15,7 +15,7 @@ modId=''
 location=''
 helpTerminate=false
 
-while getops "m:l:h" flag; do
+while getopts "m:l:h" flag; do
     case "$flag" in
         h) Help;;
         m) modId="${OPTARG}";;
