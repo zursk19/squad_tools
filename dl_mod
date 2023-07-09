@@ -14,16 +14,17 @@ Help()
 
 }
 
+echo
 echo "MOD Downloader by ZURSK19";
 modId=''
 location=''
 helpTerminate=false
 
-while getopts "m:l:h" flag; do
-    case "$flag" in
+while getopts "m:l:h" opts; do
+    case "$opts" in
         h) Help;;
-        m) modId="${OPTARG}";;
-        l) location="${OPTARG}";;
+        m) modId="$OPTARG";;
+        l) location="$OPTARG";;
     esac
 done
 
